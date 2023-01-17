@@ -111,7 +111,7 @@
             <h3>Exponentiation operator (**) denoted by a Double Asterisks: Raises the operand on the left of the exponentiation operation to operand on the right of the operation.</h3>
             <p>
                 4 ** 2 = 
-                <?php 
+                <?php echo
                     $number_1 = 4;
                     $power = 2; 
                     $result = $number_1 ** $power; 
