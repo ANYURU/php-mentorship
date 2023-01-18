@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="" />
+    <link rel="stylesheet" href="style.css"> 
     <title>Challenges</title>
 </head>
 <body>
@@ -25,16 +26,18 @@
             <?php
             $maximum_threshold = 35;
             $minimum_threshold = 32;
-            $result = "";
+            $temperature_check = "";
 
-            $temperature = (float) readline( ' Enter your current body temperature ');
+            $temperature = 39;
             if ( $temperature > $maximum_threshold ):
-                $result = "Your temperature is high";
+                $temperature_check = "Your temperature is high";
             else:
                 if ( $temperature < $minimum_threshold ):
-                    $result = "Your temperature is low";
+                    $temperature_check = "Your temperature is low";
                 endif;
             endif;
+
+            echo '</br> Current Temperature: '.$temperature.': '.$temperature_check;
             ?>
         </div>
     </section>
@@ -51,14 +54,14 @@
             </div>
         </div>
     </section>
-    <section class="result">
+    <section class="temperature_check">
         <div class="code-snippet">
             <?php
             $maximum_threshold = 120;
             $minimum_threshold = 60;
             $speed_check= "";
 
-            $current_speed = (float) readline( " What is your vehicle's  current speed");
+            $current_speed = 90;
             if ( $current_speed > $maximum_threshold ):
                 $speed_check= "Warning! Your are over speeding. Please slow down.";
             elseif ( $current_speed < $minimum_threshold ):
@@ -66,6 +69,8 @@
             else:
                 $speed_check = "Great. You're driving at normal speed. Keep safe.";
             endif;
+
+            echo '</br> Current Speed: '.$current_speed.': '.$speed_check;
             ?>
         </div>
     </section>
