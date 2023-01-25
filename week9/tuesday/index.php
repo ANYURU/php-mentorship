@@ -52,11 +52,7 @@
             case 7:
                 echo "{$week_days} Saturday </br>";
                 break;
-                
-
         endswitch;
-
-
     endfor;
     ?>
 
