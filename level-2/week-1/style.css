@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+.cta {
+    padding: 10px, 20px;
+    border: none;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    padding: 0.5rem, 0.5rem;
+}
+
+
