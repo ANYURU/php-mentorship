@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     /**
      * Steps:
      * 1. Specify the database details
@@ -40,13 +41,21 @@
 
         $num_rows = mysqli_num_rows($results);
 
-        if( $num_rows > 0):
-            // echo "{$num_rows} result found";
-            echo "You've logged in successfully";
-            echo "Your details are <br/>";
-            while($row = mysqli_fetch_assoc($results)):
-                echo "id: {$row['id']} date: {$row['date']} username: {$row['username']}";
-            endwhile;
+        // if( $num_rows > 0):
+        //     // echo "{$num_rows} result found";
+        //     echo "You've logged in successfully";
+        //     echo "Your details are <br/>";
+
+        if( $num_rows === 1):
+            $_SESSION['username'] = $myusername;
+            header("Location: dashboard.php")
+?>
+<p><a href="logout.php">logout</a></p>
+<?php
+            
+            // while($row = mysqli_fetch_assoc($results)):
+            //     echo "id: {$row['id']} date: {$row['date']} username: {$row['username']}";
+            // endwhile;
         else:
             echo "Login failed.  Check your username and password";
         endif; 

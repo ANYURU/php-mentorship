@@ -7,6 +7,14 @@
     <title>Login</title>
 </head>
 <body>
+    <a href="dashboard.php">Dashboard</a>
+    <?php 
+        if( isset($_GET['action'])):
+            echo 'You have logged out';
+        endif;
+
+    ?>
+    <h1>Login</h1>
     <form action="login.php" method="post">
         <input type="text" name="username" placeholder="Enter username"/>
         </br>
@@ -14,6 +22,7 @@
         </br>
         <input type="submit" value="Login"/>
     </form>
+    <h1>Logout</h1>
     <form action="signup.php" method="post">
         <input type="text" name="username" placeholder="Enter username"/>
         </br>
