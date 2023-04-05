@@ -37,11 +37,11 @@ Level 1 covers the basics of PHP programming, including:
 - [x] Functions
 - [x] Arrays
 - [x] Strings
-- [x] File handling
 
 ## Level 2
 
 Level 2 covers more advanced topics in PHP programming, including:
+- [x] File handling
 - [x] Database connectivity
 - [ ] Object-oriented programming in PHP 
 
