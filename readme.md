@@ -18,7 +18,7 @@ These levels are subdirectories of the `classes` directory, which contains infor
 The `projects` directory is a sibling to the `classes` directory and contains projects that you do in the classes.
 The folder structure looks like this:
 ```
-php-programming-sessions
+php-mentorship
 ├── classes
 │   ├── level-1
 │   └── level-2
@@ -32,21 +32,18 @@ php-programming-sessions
 
 Level 1 covers the basics of PHP programming, including:
 
-- Basic syntax
-- Control structures
-- Functions
-- Arrays
-- Strings
-- File handling
+- [x] Basic syntax
+- [x] Control structures
+- [x] Functions
+- [x] Arrays
+- [x] Strings
+- [x] File handling
 
 ## Level 2
 
 Level 2 covers more advanced topics in PHP programming, including:
-
-- Object-oriented programming in PHP
-- Web development with PHP
-- Using PHP frameworks
-- Database connectivity
+- [x] Database connectivity
+- [ ] Object-oriented programming in PHP 
 
 ## Usage
 
