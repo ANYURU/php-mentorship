@@ -38,6 +38,7 @@ echo "\n";
 $henry = new Human();
 $henry->set_name("Henry Onyango");
 echo $henry->name;
+echo "\n";
 
 $david = new Human();
 $david->set_name("David Derrick Anyuru");
