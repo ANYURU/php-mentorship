@@ -1,0 +1,18 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: rgba(30, 29, 29);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+a {
+    /* color: rgb(rgba(44, 44, 225)) */
+    text-decoration: none;
+    
+}
