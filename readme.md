@@ -1,6 +1,6 @@
-# PHP Programming Sessions README
+# PHP Programming Sessions 
 
-This README file provides an overview of the PHP programming sessions, including the folder structure, topics covered in each level, and instructions for using the classes and projects directories.
+This repository contains information and projects from PHP programming sessions.
 
 ## Table of Contents
 
@@ -12,11 +12,6 @@ This README file provides an overview of the PHP programming sessions, including
 - [Contact Information](#contact-information)
 
 ## Folder Structure
-
-The PHP programming sessions are organized into two levels: level 1 and level 2. 
-These levels are subdirectories of the `classes` directory, which contains information about the programming sessions.
-The `projects` directory is a sibling to the `classes` directory and contains projects that you do in the classes.
-The folder structure looks like this:
 ```
 php-mentorship
 ├── classes
@@ -32,19 +27,22 @@ php-mentorship
 
 Level 1 covers the basics of PHP programming, including:
 
-- [x] Basic syntax
-- [x] Control structures
-- [x] Functions
-- [x] Arrays
-- [x] Strings
+- Basic syntax
+- Control structures
+- Functions
+- Arrays
+- Strings
 
 ## Level 2
 
 Level 2 covers more advanced topics in PHP programming, including:
-- [x] File handling
-- [x] Database connectivity
-- [ ] Object-oriented programming in PHP 
-
+- File handling
+- Database connectivity
+- Object-oriented programming in PHP 
+    - What is OOP?
+    - Classes VS Objects
+    - Constructor VS Desctructor
+    
 ## Usage
 
 To use the PHP programming sessions, simply navigate to the appropriate directory in the `classes` directory and open the PHP files in a code editor. The projects in the `projects` directory are self-contained and can be run by opening the project directory in a code editor and running any necessary scripts.
