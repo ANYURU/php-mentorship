@@ -15,18 +15,34 @@
             $this->password = $password;
         }
 
+        /**
+         * Summary of getEmail
+         * @return string
+         */
         public function getEmail(): string {
             return $this->email;
         }
 
+        /**
+         * Summary of getPassword
+         * @return string
+         */
         private function getPassword(): string {
             return $this->password;
         }
 
+        /**
+         * Summary of getId
+         * @return string
+         */
         public function getId(): string {
             return $this->id;
         }
 
+        /**
+         * Summary of getUniqueId
+         * @return string
+         */
         private function generateUniqueId(): string {
             $id = uniqid();
             /**
