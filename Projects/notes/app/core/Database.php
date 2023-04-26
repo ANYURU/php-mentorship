@@ -5,35 +5,26 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/..');
 $dotenv->load();
 
 class Database {
-    private $dotenv;
-    private $host;
+    private $servername;
     private $username;
     private $password;
     private $dbname;
     private $connection;
 
-    public function __construct() {
-        $this->host = $_ENV['DB_HOST'];
-        $this->username = $_ENV['DB_USERNAME'];
-        $this->password = $_ENV['DB_PASSWORD'];
-        $this->dbname = $_ENV['DB_NAME'];
+    protected function connect() {
 
-        // Connect to the database
-        $this->connection = new mysqli($this->host, $this->username, $this->password, $this->dbname);
+        $this->servername = 'localhost';
+        $this->username = 'root';
+        $this->password = '';
+        $this->dbname = 'notes_app';
 
-        // Check connection
-        if ( $this->connection->connect_error ) {
-            die('Database connection failed: '. $this->connection->connect_error);
-        }   
+        $conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+        $this->connection = $conn;
+        return $conn;
     }
 
-    
-    public function getConnection() {
-        return $this->connection;  
-    }
-
-    public function closeConnection() {
-        $this->connection->close();
+    protected function closeConnection() {
+        return $this->connection->close();
     }
 
 }
