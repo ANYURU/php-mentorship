@@ -1,0 +1,15 @@
+{
+    "name": "davie/framework",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "David Derrick Anyuru",
+            "email": "davidderrickanyuru@gmail.com"
+        }
+    ],
+    "require": {}
+}

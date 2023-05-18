@@ -1,30 +1,33 @@
 <?php 
-require_once __DIR__ . '/../vendor/autoload.php';
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/..');
-$dotenv->load();
 
 class Database {
-    private $servername;
-    private $username;
-    private $password;
-    private $dbname;
-    private $connection;
+    
+    protected $connection;
+    protected $stmt;
 
-    protected function connect() {
 
-        $this->servername = 'localhost';
-        $this->username = 'root';
-        $this->password = '';
-        $this->dbname = 'notes_app';
+    public function connect () {
+        $host = 'localhost';
+        $dbname = 'notes_app';
+        $user = 'root';
+        $password = 'root';
 
-        $conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
-        $this->connection = $conn;
-        return $conn;
+        try {
+            $this -> connection = new PDO(
+                'mysql:host='.$host.';dbname='.$dbname, 
+                $user,
+                $password 
+            );
+
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $this->connection;
+        }catch (PDOException $e) {
+            die($e->getMessage());
+        }
     }
 
-    protected function closeConnection() {
-        return $this->connection->close();
+    public function closeConnection () {
+        return $this->connection = null;
     }
-
+    
 }
