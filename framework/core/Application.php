@@ -21,7 +21,6 @@ class Application
         self::$ROOT_DIR = $rootPath;
         $this->request = new Request();
         $this->router = new Router($this->request);
-
     }
 
     public function run()

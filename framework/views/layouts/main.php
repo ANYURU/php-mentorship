@@ -8,8 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-    {{ Update the page content here }}
-    
+    <!-- 
+        Similar to the react index.html
+        This is where we embedd the text.
+    -->
+    {{content}}
 </body>
 </html>
   
