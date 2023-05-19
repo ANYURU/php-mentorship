@@ -1,8 +1,8 @@
 <?php
 namespace app\controllers;
 
-use app\core\Application;
 use app\core\Controller;
+use app\core\Request;
 
 /**
  * Summary of SiteController
@@ -16,17 +16,17 @@ class SiteController extends Controller
             'name' => 'David Derrick Anyuru'
         ];
         // return Application::$app->router->renderContent("home");
-        return self::render('home', $params);
+        return $this->render('home', $params);
     }
 
     public function contact()
     {
-        return self::render('contact');
+        return $this->render('contact');
     }
 
-    public function handleContact()
+    public function handleContact(Request $request)
     {
-        $body = Application::$app->request->getBody();
+        $body = $request->getBody();
         echo '<pre>';
         var_dump($body);
         echo '</pre>';

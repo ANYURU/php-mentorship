@@ -13,8 +13,7 @@
     </div>
     <div>
         <label for="body">Body</label>
-        <textarea name="body" id="body" cols="30" rows="10" id="body">
-        </textarea>
+        <textarea name="body" id="body" cols="30" rows="10" id="body"></textarea>
     </div>
     <input type="submit" value="submit">
 </form>
