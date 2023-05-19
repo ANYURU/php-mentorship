@@ -24,7 +24,8 @@ class Router
         $this->routes['get'][$path] = $callback;
     }
 
-    public function post($path, $callback) {
+    public function post($path, $callback)
+    {
         $this->routes['post'][$path] = $callback;
     }
 
@@ -40,14 +41,10 @@ class Router
         if (is_string($callback)):
             return $this->renderView($callback);
         endif;
-        if ( is_array($callback)):
+        if (is_array($callback)):
             $callback[0] = new $callback[0]();
         endif;
         return call_user_func($callback);
-        // echo '<pre>';
-        // var_dump($callback);
-        // echo '</pre>';
-        // exit();
     }
 
     public function renderView($view, $params = [])
@@ -77,7 +74,7 @@ class Router
         // var_dump($params);
         // echo '</pre>';
 
-        foreach( $params as $key => $value):
+        foreach ($params as $key => $value):
             /**
              * Dynamically assign values based on the keys of the params associative array
              */

@@ -1,5 +1,6 @@
 <?php
 namespace app\controllers;
+
 use app\core\Application;
 use app\core\Controller;
 
@@ -9,7 +10,8 @@ use app\core\Controller;
 class SiteController extends Controller
 {
 
-    public static function home() {
+    public function home()
+    {
         $params = [
             'name' => 'David Derrick Anyuru'
         ];
@@ -17,13 +19,18 @@ class SiteController extends Controller
         return self::render('home', $params);
     }
 
-    public static function contact()
+    public function contact()
     {
         return self::render('contact');
     }
 
-    public static function handleContact()
+    public function handleContact()
     {
-        return 'Handling submitted data';
+        $body = Application::$app->request->getBody();
+        echo '<pre>';
+        var_dump($body);
+        echo '</pre>';
+        exit;
+        // return $body;
     }
 }
