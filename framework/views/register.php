@@ -10,7 +10,7 @@
         <label for="email">
             Email
         </label>
-        <input type="email" placeholder="johndoe@gmail.com" id="email" name="email">
+        <input type="text" placeholder="johndoe@gmail.com" id="email" name="email">
     </div>
     <div>
         <label for="password">
